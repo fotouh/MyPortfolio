@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--VeryLightGray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  justify-content: space-around;
+}
+
+section:first-child {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+section:first-child h4 {
+  font-weight: 200;
+  font-size: 30px;
+  color: var(--GrayishBlue);
+}
+
+section:first-child b {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--VeryDarkBlue);
+}
+
+section:first-child p {
+  font-weight: 200;
+  text-align: center;
+  font-size: 15px;
+  width: 30%;
+  color: var(--GrayishBlue);
+}
+
+section:last-child {
+  height: 460px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: auto 0;
+}
+
+.maincard {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  width: 300px;
+  position: relative;
+  margin: auto;
+  margin-right: 50px;
+  background-color: var(--VeryLightGray);
+  border-top: 5px solid var(--Cyan);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.super,
+.team,
+.Karma,
+.calc {
+  height: 50%;
+  padding: 20px;
+}
+
+.super h4,
+.team h4,
+.Karma h4,
+.calc h4 {
+  padding-bottom: 10px;
+}
+
+.super p,
+.team p,
+.Karma p,
+.calc p {
+  font-size: 13px;
+  color: var(--GrayishBlue);
+  line-height: 25px;
+}
+
+.super::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icon-supervisor.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.cardtwo {
+  display: block;
+  flex-direction: column;
+  width: 300px;
+
+}
+
+.cardtwo .maincard:first-child {
+  height: 220px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 40px;
+  background-color: var(--VeryLightGray);
+  border-top: 5px solid var(--Red);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.team::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icon-team-builder.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.cardtwo .maincard:last-child {
+  height: 220px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--VeryLightGray);
+  border-top: 5px solid var(--Orange);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.Karma::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icon-karma.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.maincard[asd] {
+  height: 220px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 50px;
+  background-color: var(--VeryLightGray);
+  border-top: 5px solid var(--Blue);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.calc::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icon-calculator.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-color: var(--VeryLightGray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+    width: 100vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125vh;
+    width: 100%;
+  }
+
+  section:first-child {
+    height:200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  section:first-child h4 {
+    font-weight: 200;
+    font-size: 20px;
+    color: var(--GrayishBlue);
+
+  }
+
+  section:first-child b {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--VeryDarkBlue);
+  }
+
+  section:first-child p {
+    font-weight: 200;
+    text-align: center;
+    font-size: 10px;
+    width: 70%;
+    color: var(--GrayishBlue);
+  }
+
+  section:last-child {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .maincard {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: var(--VeryLightGray);
+    border-top: 5px solid var(--Cyan);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+  .cardtwo .maincard:first-child {
+    height: 220px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: var(--VeryLightGray);
+    border-top: 5px solid var(--Red);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+  .maincard[asd] {
+    height: 220px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: var(--VeryLightGray);
+    border-top: 5px solid var(--Blue);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+}
+  .cardtwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .cardtwo .maincard:last-child {
+    height: 220px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;  
+    background-color: var(--VeryLightGray);
+    border-top: 5px solid var(--Orange);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+}

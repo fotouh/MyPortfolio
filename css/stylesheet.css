@@ -1,0 +1,589 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --photo: url("../Images/1693624234655.jpg");
+  scroll-behavior: smooth;
+}
+
+/* width */
+.gallrey::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+.gallrey::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+/* Handle */
+.gallrey::-webkit-scrollbar-thumb {
+  background: goldenrod;
+}
+
+/* Handle on hover */
+.gallrey::-webkit-scrollbar-thumb:hover {
+  background: orange;
+}
+ul {
+  list-style: none;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-image: url("../Images/wallpaperflare.com_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  color: #242424;
+}
+.pos {
+  position: fixed;
+  right: 0;
+  top: 33%;
+  z-index: 4;
+}
+.stick {
+  position: relative;
+  background-color: gold;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.stick::after {
+  position: absolute;
+  content: "";
+  bottom: 3rem;
+  left: 45%;
+  translate: (-50%, -50%);
+  width: 0.5rem;
+  height: 7.5rem;
+  border-left: 5px dotted white;
+}
+.stick a {
+  position: relative;
+  background-color: gold;
+  z-index: 999;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+}
+.stick a:hover {
+  color: blue;
+}
+i {
+  font-size: 1.5rem;
+}
+
+.stick a:hover i {
+  scale: 1.2;
+  color: blue;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page,
+.pageabout,
+.project,
+.contact {
+  height: 90vh;
+  width: 90vw;
+  margin: 2rem 0;
+}
+.page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.whoam {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  gap: 1rem;
+  text-transform: capitalize;
+}
+
+.box h2 {
+  font-size: 3rem;
+}
+.box span {
+  font-size: 3rem;
+  padding: 0 1rem;
+  color: gold;
+  text-shadow: -3px 2px black;
+}
+.box span:hover {
+  color: blue;
+  text-shadow: -3px 2px gold;
+}
+.box h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: gold;
+  padding: 0.2rem 0.5rem;
+  width: fit-content;
+}
+.box h3:hover {
+  color: gold;
+  background: #242424;
+}
+.box p {
+  font-size: 1rem;
+  word-spacing: 5px;
+  line-height: 1.8;
+}
+.box a {
+  background-color: gold;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.box a:hover {
+  color: gold;
+  background: #242424;
+}
+.pic {
+  background-image: var(--photo);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+.pic:hover,
+.side .img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+/* --page about */
+.pageabout,
+.project,
+.contact {
+  display: flex;
+  flex-direction: row;
+}
+.side {
+  width: 20%;
+  height: 100%;
+}
+.side .img {
+  background-image: var(--photo);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  height: 40%;
+  -webkit-filter: grayscale(1);
+}
+.side .list {
+  height: 60%;
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.side ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.side li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #242424;
+  position: relative;
+  z-index: 9999;
+  background-color: gold;
+}
+.side li a:hover {
+  color: blue;
+}
+.side .list ul::after {
+  position: absolute;
+  content: "";
+  bottom: 1rem;
+  left: 50%;
+  translate: (-50%, -50%);
+  width: 0.5rem;
+  height: 13rem;
+  border-left: 5px dotted white;
+}
+
+.about,
+.secpro,
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  padding: 3rem;
+  background-color: gainsboro;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px dotted #242424;
+}
+.header h1 {
+  color: #242424;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+.disc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.disc h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.disc span {
+  padding: 0 0.5rem;
+  color: gold;
+  text-shadow: -3px -1px black;
+}
+.disc span:hover {
+  color: blue;
+  text-shadow: -3px 2px gold;
+}
+.disc p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+.numbers {
+  display: flex;
+}
+.status {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: black;
+  padding: 1rem;
+  gap: 1rem;
+  width: 40%;
+}
+.statusbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: wheat;
+}
+.statusbox h1 {
+  color: gold;
+  letter-spacing: 0.2rem;
+}
+.statusbox p {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.whatdo {
+  padding: 0 1rem;
+  width: 60%;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+.title h1 {
+  text-shadow: 1px 2px gold;
+}
+.explain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: capitalize;
+}
+.prog {
+  position: relative;
+  width: 100%;
+  margin-left: 0.5rem;
+  height: 1rem;
+  background-color: black;
+}
+.explain .prog span {
+  position: absolute;
+  left: 0rem;
+  width: 98%;
+  height: 1rem;
+  text-align: center;
+  font-weight: bolder;
+  background-color: gold;
+  animation: Fatij;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  -webkit-animation: Fatij;
+}
+@keyframes Fatij {
+  from {
+    width: 0rem;
+    height: 1rem;
+  }
+  to {
+    width: 98%;
+    height: 1rem;
+  }
+}
+.explain .pro:nth-child(2) span {
+  width: 95%;
+  height: 1rem;
+  animation: ddd;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  -webkit-animation: ddd;
+}
+@keyframes ddd {
+  from {
+    width: 0rem;
+    height: 1rem;
+  }
+  to {
+    width: 95%;
+    height: 1rem;
+  }
+}
+.explain .pro:nth-child(3) span {
+  width: 15%;
+  height: 1rem;
+  animation: ccc;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  -webkit-animation: ccc;
+}
+@keyframes ccc {
+  from {
+    width: 0rem;
+    height: 1rem;
+  }
+  to {
+    width: 15%;
+    height: 1rem;
+  }
+}
+/* projects */
+.gallrey {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: scroll;
+}
+
+.website {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 15rem;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.website:hover .webimg {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+.webimg {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
+.visit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visit h1 {
+  text-transform: capitalize;
+  margin-left: 1rem;
+}
+.visit a {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  height: 2rem;
+  width: 5rem;
+  margin-right: 1rem;
+  border: 1px solid gold;
+  border-radius: 0.5rem;
+  background: gold;
+  color: black;
+  padding: 0 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.visit a:hover {
+  color: gold;
+  padding-bottom: 1rem;
+  background: #242424;
+}
+.social {
+  text-transform: capitalize;
+}
+.social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+.social li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.social a {
+  color: #242424;
+  text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .pos {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    z-index: 4;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  .page {
+    grid-template-columns: repeat(2, 90vw);
+  }
+  .stick {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .stick::after {
+    position: absolute;
+    content: "";
+    bottom: 50%;
+    left: 20%;
+    translate: (-50%, -50%);
+    width: 7.5rem;
+    height: 0;
+    border-top: 5px dotted white;
+  }
+  .pic {
+    display: none;
+  }
+  .side {
+    display: none;
+  }
+  .page,
+  .pageabout,
+  .project,
+  .contact {
+    height: fit-content;
+    width: 95vw;
+    margin: 2rem 0;
+  }
+  .pageabout {
+    height: fit-content;
+  }
+  .numbers {
+    flex-direction: column;
+    width: 100%;
+  }
+  .status,
+  .whatdo {
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px dotted #242424;
+  }
+  .header h1 {
+    color: #242424;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+  .disc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .disc h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .disc span {
+    padding: 0 0.5rem;
+    color: gold;
+    text-shadow: -3px -1px black;
+  }
+  .disc span:hover {
+    color: blue;
+    text-shadow: -3px 2px gold;
+  }
+  .disc p {
+    font-size: 1rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+  }
+  .about,
+  .secpro,
+  .social {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90vw;
+    padding: 3rem;
+    background-color: gainsboro;
+  }
+}
